@@ -8,6 +8,7 @@ AllCops:
     - 'db/**/*'
     - 'script/**/*'
     - 'bin/**/*'
+    - 'vendor/bundle/**/*'
 
 Metrics/LineLength:
   Max: 115
