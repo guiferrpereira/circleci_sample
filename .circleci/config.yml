@@ -36,6 +36,12 @@ jobs:
           paths:
             - vendor/bundle
       - run:
+          name: Rails best practices
+          command: bundle exec rails_best_practices
+      - run:
+          name: rubocop
+          command: bundle exec rubocop
+      - run:
           name: Create and Load Database
           command: bundle exec rake db:create db:schema:load --trace
       - run:
