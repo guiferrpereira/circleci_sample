@@ -28,6 +28,7 @@ group :development, :test do
 
   gem 'rubocop'
   gem 'panolint'
+  gem 'rubocop-discourse'
   gem 'rubocop-performance'
   gem 'rubocop-rails'
   gem 'rubocop-rspec'
