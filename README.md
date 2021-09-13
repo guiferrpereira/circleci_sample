@@ -1,24 +1,6 @@
-# README
+# CircleCI sample App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[![guiferrpereira](https://circleci.com/gh/guiferrpereira/circleci_sample.svg)](https://app.circleci.com/pipelines/github/guiferrpereira/circleci_sample)
+![guiferrpereira](https://raw.githubusercontent.com/guiferrpereira/coverage/master/circleci_sample/main/badge.svg)
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This repository is just a sample of how to configure CircleCI/Github and a RoR app
