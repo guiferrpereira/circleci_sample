@@ -54,6 +54,19 @@ jobs:
       - store_artifacts:
           path: /tmp/coverage
           destination: coverage
+      - run:
+          name: Upload coverage to be persistent
+          command: |
+            mkdir -p /tmp/internal
+            cd /tmp/internal
+            git config --global user.email "guiferrpereira@gmail.com"
+            git config --global user.name "guiferrpereira"
+            git clone https://guiferrpereira:${DANGER_GITHUB_API_TOKEN}@github.com/guiferrpereira/coverage.git
+            cd coverage
+            mkdir -p ${CIRCLE_PROJECT_REPONAME}/${CIRCLE_BRANCH}
+            mv /tmp/coverage/* /tmp/internal/coverage/${CIRCLE_PROJECT_REPONAME}/${CIRCLE_BRANCH}
+            git add . && git commit -m "Add ${CIRCLE_PROJECT_REPONAME} coverage"
+            git push --set-upstream origin master
   lint-dockerfile:
     executor: docker/machine
     steps:
